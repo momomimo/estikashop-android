@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="fixed sidebar-left-collapsed">
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <title>Bulustalan - Dashboard</title>
+    <meta name="keywords" content="Sistem Informasi Desa">
+    <meta name="description" content="Projek Sistem Pengelolaan Data Kelurahan">
+    <meta name="author" content="codepedia">
+    <link rel="icon" href="octopus/assets/images/logo-desa.png" sizes="16x16" type="image/png">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Web Fonts  -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light"
+        rel="stylesheet" type="text/css">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="octopus/assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="octopus/assets/vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="octopus/assets/vendor/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="octopus/assets/vendor/bootstrap-datepicker/css/datepicker3.css">
+
+
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="octopus/assets/vendor/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css">
+    <link rel="stylesheet" href="octopus/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="octopus/assets/vendor/morris/morris.css">
+
+    <!--tambahan-->
+    <link rel="stylesheet" href="octopus/assets/vendor/pnotify/pnotify.custom.css">
+    <link rel="stylesheet" href="select2/select2.css">
+    <link rel="stylesheet" href="select2/select2-bootstrap.css">
+    <link rel="stylesheet" href="datatabel/assets/css/datatables.css">
+    <link rel="stylesheet" href="octopus/assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.css">
+
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="octopus/assets/stylesheets/theme.css">
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="octopus/assets/stylesheets/skins/default.css">
+
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="octopus/assets/stylesheets/theme-custom.css">
+
+    <!-- Head Libs -->
+    <script src="octopus/assets/vendor/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+    <section class="body">
+        <!-- start: header -->
+        <header class="header">
+            <div class="logo-container">
+                <a href="home.html" class="logo">
+                    <img src="octopus/assets/images/logo-1.png" alt="Desa Kita - Codepedia" width="50%">
+                </a>
+                <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html"
+                    data-fire-event="sidebar-left-opened">
+                    <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                </div>
+            </div>
+            <!-- start: search & user box -->
+            <div class="header-right">
+                <span class="separator"></span>
+                <div id="userbox" class="userbox">
+                    <a href="#" data-toggle="dropdown">
+                        <figure class="profile-picture" id="foto-pengguna">
+
+                        </figure>
+                        <div class="profile-info" id="profil-pengguna" data-lock-name="AHLUL"
+                            data-lock-email="mimow.aja@gmail.com">
+                        </div>
+                        <i class="fa custom-caret"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <ul class="list-unstyled">
+                            <li class="divider"></li>
+                            <li>
+                                <a role="menuitem" tabindex="-1" href="#"><i class="fa fa-user"></i> My Profile</a>
+                            </li>
+                            <li>
+                                <a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i
+                                        class="fa fa-lock"></i> Lock Screen</a>
+                            </li>
+                            <li>
+                                <a role="menuitem" tabindex="-1" href="login.html"><i class="fa fa-power-off"></i>
+                                    Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end: search & user box -->
+        </header>
+        <!-- end: header -->
+        <div class="inner-wrapper">
+            <!-- start: sidebar -->
+            <aside id="sidebar-left" class="sidebar-left">
+
+                <div class="sidebar-header">
+                    <div class="sidebar-title">
+                        <font color="white">Navigasi</font>
+                    </div>
+                    <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html"
+                        data-fire-event="sidebar-left-toggle">
+                        <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                    </div>
+                </div>
+
+                <div class="nano has-scrollbar">
+                    <div class="nano-content" tabindex="0" style="right: -17px;">
+                        <nav id="menu" class="nav-main" role="navigation">
+                            <ul class="nav nav-main">
+                                <li class="nav-active">
+                                    <a href="home.html">
+                                        <i class="fa fa-home" aria-hidden="true"></i>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-parent ">
+                                    <a>
+                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                        <span>Keluarga</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li class="">
+                                            <a href="datakeluarga.html">
+                                                Data Keluarga
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="detailkeluarga.html">
+                                                Detail Keluarga
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="">
+                                    <a href="#">
+                                        <i class="fa fa-file-text" aria-hidden="true"></i>
+                                        <span>Pengajuan Surat</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <span>Kotak Pesan</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                    <div class="nano-pane" style="display: none; opacity: 1; visibility: visible;">
+                        <div class="nano-slider" style="height: 284px; transform: translate(0px, 0px);"></div>
+                    </div>
+                </div>
+
+            </aside>
+            <!-- end: sidebar -->
+            <section role="main" class="content-body">
+                <header class="page-header">
+                    <h2>Data Keluarga</h2>
+
+                    <div class="right-wrapper pull-right">
+                        <ol class="breadcrumbs">
+                            <li>
+                                <a href="index.html">
+                                    <i class="fa fa-home"></i>
+                                </a>
+                            </li>
+                            <li><span>Keluarga</span></li>
+                            <li><span>Data Keluarga</span></li>
+                        </ol>
+
+                        <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+                    </div>
+                </header>
+                <!-- Start: page -->
+                <div class="row">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            <div class="panel-actions">
+                            </div>
+
+                            <h2 class="panel-title">Data Keluarga</h2>
+                        </header>
+                        <div class="panel-body">
+
+
+                            <div class="col-md-12">
+                                <div class="box box-info">
+                                    <div class="box-header with-border">
+                                        <a href="detailkeluarga.html" class="btn btn-primary"><i
+                                                class="fa fa-chevron-right"></i> Ke Detail Keluarga</a>
+                                    </div>
+                                    <div class="box-header" id="nomorkk">
+
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="form-group" id="alamat">
+
+                                                </div>
+                                                <div class="form-group" id="rw">
+
+                                                </div>
+                                                <div class="form-group" id="namadesa">
+
+                                                </div>
+                                                <div class="form-group" id="kecamatan">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group" id="kabupaten">
+
+                                                </div>
+                                                <div class="form-group" id="kodepos">
+
+                                                </div>
+                                                <div class="form-group" id="propinsi">
+
+                                                </div>
+                                                <div class="form-group" id="jumlah_anggota">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="row">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-hover">
+                                                            <thead class="bg-grey disabled color-palette">
+                                                                <tr>
+                                                                    <th class="text-center">No</th>
+                                                                    <th class="text-center">Nama Lengkap</th>
+                                                                    <th class="text-center">NIK</th>
+                                                                    <th class="text-center">Jenis Kelamin</th>
+                                                                    <th class="text-center">Tempat Lahir</th>
+                                                                    <th class="text-center">Tanggal Lahir</th>
+                                                                    <th class="text-center">Agama</th>
+                                                                    <th class="text-center">Pendidikan</th>
+                                                                    <th class="text-center">Jenis Pekerjaan</th>
+                                                                    <th class="text-center">Golongan Darah</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody id="datakeluarga1">
+
+                                                            </tbody>
+                                                        </table>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-hover ">
+                                                            <thead class="bg-grey disabled color-palette">
+                                                                <tr>
+                                                                    <th class="text-center">No</th>
+                                                                    <th class="text-center">Status Perkawinan</th>
+                                                                    <th class="text-center">Tanggal Perkawinan</th>
+                                                                    <th class="text-center">Status Hubungan Dalam
+                                                                        Keluarga</th>
+                                                                    <th class="text-center">Kewarganegaraan</th>
+                                                                    <th class="text-center">No. Paspor</th>
+                                                                    <th class="text-center">No. KITAS / KITAP</th>
+                                                                    <th class="text-center">Nama Ayah</th>
+                                                                    <th class="text-center">Nama Ibu</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody id="datakeluarga2">
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <center>
+
+                                                        <div class="table-responsive">
+                                                            <div class="col-sm-12">
+
+                                                                <table class="table-nobordered">
+                                                                    <tbody>
+                                                                        <tr id="namadesa2">
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">KEPALA KELUARGA</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td class="text-center">KEPALA DESA</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr id="namakades">
+
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+            </section>
+        </div>
+
+        <aside id="sidebar-right" class="sidebar-right">
+            <div class="nano has-scrollbar">
+                <div class="nano-content" tabindex="0" style="right: -17px;">
+                    <a href="#" class="mobile-close visible-xs">
+                        Collapse <i class="fa fa-chevron-right"></i>
+                    </a>
+
+                    <div class="sidebar-right-wrapper">
+
+                        <div class="sidebar-widget widget-calendar">
+                            <h6>Kalender</h6>
+                            <div data-plugin-datepicker="" data-plugin-skin="dark">
+                                <div class="datepicker datepicker-inline datepicker-dark">
+                                    <div class="datepicker-days" style="display: block;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="sidebar-widget widget-friends">
+                            <h6>Catatan Kerja</h6>
+                            <div class="pull-right">
+                                <a href="#"><i class="fa fa-plus mr-xs"></i> </a>
+                                <a href="#"><i class="fa fa-pencil mr-xs"></i> </a>
+                                <a href="#"><i class="fa fa-times mr-xs"></i> </a>
+                            </div>
+                            <div class="toggle" data-plugin-toggle="">
+                                <section class="toggle">
+                                    <label>Judul | <small class="text-right">26/04/2019</small>
+                                    </label>
+                                    <p>User Management merupakan fitur yang digunakan untuk memberikan akses kepada
+                                        siapa saja yang dapat mengakses ke aplikasi Sistem Informasi Desa. Anda dapat
+                                        memberikan akses Login Aplikasi Sistem kepada :
+                                        <br>
+                                        <strong>1. Perangkat Desa</strong>
+                                        <br>
+                                        <strong>2. RT / RW</strong>
+                                        <br>
+                                        <strong>3. Kepala Keluarga</strong>
+                                        <br>
+                                    </p>
+                                </section>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+                <div class="nano-pane" style="display: block; opacity: 1; visibility: visible;">
+                    <div class="nano-slider" style="height: 340px; transform: translate(0px, 0px);"></div>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <!-- Vendor -->
+    <script src="octopus/assets/vendor/jquery/jquery.js"></script>
+    <script src="octopus/assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+    <script src="octopus/assets/vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="octopus/assets/vendor/nanoscroller/nanoscroller.js"></script>
+    <script src="octopus/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="octopus/assets/vendor/magnific-popup/magnific-popup.js"></script>
+    <script src="octopus/assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+
+    <!-- Specific Page Vendor -->
+    <script src="octopus/assets/vendor/jquery-ui/js/jquery-ui-1.10.4.custom.js"></script>
+    <script src="octopus/assets/vendor/jquery-ui-touch-punch/jquery.ui.touch-punch.js"></script>
+    <script src="octopus/assets/vendor/jquery-appear/jquery.appear.js"></script>
+    <script src="octopus/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+    <script src="octopus/assets/vendor/jquery-easypiechart/jquery.easypiechart.js"></script>
+    <script src="octopus/assets/vendor/flot/jquery.flot.js"></script>
+    <script src="octopus/assets/vendor/flot-tooltip/jquery.flot.tooltip.js"></script>
+    <script src="octopus/assets/vendor/flot/jquery.flot.pie.js"></script>
+    <script src="octopus/assets/vendor/flot/jquery.flot.categories.js"></script>
+    <script src="octopus/assets/vendor/flot/jquery.flot.resize.js"></script>
+    <script src="octopus/assets/vendor/jquery-sparkline/jquery.sparkline.js"></script>
+    <script src="octopus/assets/vendor/raphael/raphael.js"></script>
+    <script src="octopus/assets/vendor/morris/morris.js"></script>
+    <script src="octopus/assets/vendor/gauge/gauge.js"></script>
+    <script src="octopus/assets/vendor/snap-svg/snap.svg.js"></script>
+    <script src="octopus/assets/vendor/liquid-meter/liquid.meter.js"></script>
+    <script src="octopus/assets/vendor/jqvmap/jquery.vmap.js"></script>
+    <script src="octopus/assets/vendor/jqvmap/data/jquery.vmap.sampledata.js"></script>
+    <script src="octopus/assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+    <script src="octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.africa.js"></script>
+    <script src="octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.asia.js"></script>
+    <script src="octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.australia.js"></script>
+    <script src="octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.europe.js"></script>
+    <script src="octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.north-america.js"></script>
+    <script src="octopus/assets/vendor/jqvmap/maps/continents/jquery.vmap.south-america.js"></script>
+
+    <!--tambahan-->
+    <script src="octopus/assets/vendor/pnotify/pnotify.custom.js"></script>
+    <script src="select2/select2.min.js"></script>
+    <script src="jquery-datatables/media/js/jquery.dataTables.js"></script>
+    <script src="jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js"></script>
+    <script src="datatabel/assets/js/datatables.js"></script>
+    <script src="octopus/assets/vendor/jquery-autosize/jquery.autosize.js"></script>
+    <script src="octopus/assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+    <script src="sweetarlet/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Theme Base, Components and Settings -->
+    <script src="octopus/assets/javascripts/theme.js"></script>
+
+    <!-- Theme Custom -->
+    <script src="octopus/assets/javascripts/theme.custom.js"></script>
+
+    <!-- Theme Initialization Files -->
+    <script src="octopus/assets/javascripts/theme.init.js"></script>
+
+    <!-- Examples -->
+    <script src="octopus/assets/javascripts/dashboard/examples.dashboard.js"></script>
+    <script src="octopus/assets/javascripts/ui-elements/examples.notifications.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="octopus/js/scriptku.js"></script>
+
+
+
+    <input id="ext-version" value="1.3.6" type="hidden">
+</body>
+
+</html>
